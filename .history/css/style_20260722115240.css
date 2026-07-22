@@ -1,0 +1,1349 @@
+:root {
+  --ink: #30332f;
+  --sub: #73756e;
+  --paper: #fbfaf6;
+  --cream: #f2eee6;
+  --line: rgba(48, 51, 47, .32);
+  --sage: #6f806f;
+  --deep-green: rgba(48, 67, 52, .58)
+}
+
+* {
+  box-sizing: border-box
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Noto Sans JP", "Yu Gothic", YuGothic, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: .055em
+}
+
+img {
+  display: block;
+  width: 100%
+}
+
+figure {
+  margin: 0
+}
+
+a {
+  color: inherit;
+  text-decoration: none
+}
+
+.site-header {
+  position: absolute;
+  z-index: 20;
+  inset: 0 0 auto;
+  height: 78px;
+  background: var(--deep-green);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-bottom: 1px solid rgba(255, 255, 255, .12)
+}
+
+.header-inner {
+  width: min(1180px, calc(100% - 96px));
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.logo {
+  width: 112px
+}
+
+.logo img {
+  filter: saturate(.55) brightness(1.06)
+}
+
+.global-nav {
+  display: flex;
+  gap: 34px;
+  color: rgba(255, 255, 255, .9);
+  font-size: 11px;
+  letter-spacing: .09em
+}
+
+.global-nav a {
+  transition: opacity .2s
+}
+
+.global-nav a:hover {
+  opacity: .65
+}
+
+.hero {
+  position: relative;
+  height: 610px;
+  overflow: hidden;
+  background: #e7e6df
+}
+
+.hero-image {
+  height: 100%;
+  object-fit: cover;
+  object-position: center 49%;
+  filter: saturate(.80) contrast(.91) brightness(1.06) sepia(.06)
+}
+
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(31, 49, 35, .14), transparent 30%)
+}
+
+.hero-frost {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 47%, rgba(251, 250, 246, .08) 57%, rgba(251, 250, 246, .74) 77%, var(--paper) 100%)
+}
+
+.hero-copy {
+  position: absolute;
+  left: calc(50% - 500px);
+  bottom: 58px
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-family: "Yu Mincho", YuMincho, "Hiragino Mincho ProN", serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: .115em;
+  white-space: nowrap
+}
+
+.hero-copy p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 2.05;
+  letter-spacing: .08em
+}
+
+.section {
+  padding: 96px 40px
+}
+
+.content-container {
+  width: min(910px, 100%);
+  margin: auto
+}
+
+.narrow-container {
+  width: min(760px, calc(100% - 80px));
+  margin: auto
+}
+
+.section-title,
+.small-section-title {
+  margin: 0;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: .18em
+}
+
+.section-title {
+  font-size: 22px;
+  margin-bottom: 56px
+}
+
+.small-section-title {
+  font-size: 18px;
+  margin-bottom: 32px
+}
+
+.opening-block {
+  padding: 58px 0 42px;
+  background: var(--paper)
+}
+
+.schedule {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+  letter-spacing: .03em
+}
+
+.schedule th,
+.schedule td {
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+  font-weight: 300
+}
+
+.schedule tbody th {
+  text-align: left;
+  width: 170px
+}
+
+.opening-notes {
+  margin-top: 14px;
+  font-size: 8px;
+  line-height: 1.7;
+  color: #5e605a
+}
+
+.opening-notes p {
+  margin: 2px 0
+}
+
+.facility-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  width: 100%;
+  height: 195px;
+  overflow: hidden
+}
+
+.facility-strip img {
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.76) contrast(.90) brightness(1.07) sepia(.10)
+}
+
+.news-section {
+  padding-top: 84px;
+  padding-bottom: 92px
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 74px;
+  align-items: center
+}
+
+.news-photo {
+  height: 335px;
+  overflow: hidden
+}
+
+.news-photo img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(.76) contrast(.90) brightness(1.06) sepia(.10)
+}
+
+.news-copy h2,
+.greeting-copy h2,
+.about-grid h2 {
+  margin: 0 0 30px;
+  font-size: 21px;
+  font-weight: 300;
+  letter-spacing: .15em
+}
+
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.news-list li {
+  border-bottom: 1px solid rgba(48, 51, 47, .52)
+}
+
+.news-list a {
+  display: block;
+  padding: 13px 0;
+  font-size: 10px
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 24px;
+  padding-right: 28px;
+  border-right: 1px solid #5e605a;
+  font-size: 9px;
+  letter-spacing: .1em
+}
+
+.greeting {
+  background: var(--cream)
+}
+
+.greeting-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 82px;
+  align-items: start
+}
+
+.greeting-photo {
+  height: 385px;
+  overflow: hidden
+}
+
+.greeting-photo img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 54% center;
+  filter: saturate(.76) contrast(.90) brightness(1.06) sepia(.10)
+}
+
+.kicker {
+  margin: 0 0 10px;
+  color: var(--sub);
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: .28em
+}
+
+.greeting-copy h2 {
+  margin-bottom: 28px
+}
+
+.greeting-copy p {
+  margin: 0 0 13px;
+  font-size: 9.5px;
+  line-height: 2.05
+}
+
+.greeting-copy .signature {
+  text-align: right;
+  margin-top: 22px;
+  font-size: 8.5px
+}
+
+.medical-section {
+  background: var(--paper)
+}
+
+.medical-list {
+  display: flex;
+  flex-direction: column;
+  gap: 62px
+}
+
+.medical-row {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 65px;
+  align-items: center
+}
+
+.medical-row.reverse {
+  grid-template-columns: 1fr 260px
+}
+
+.medical-row.reverse figure {
+  order: 2
+}
+
+.medical-row.reverse div {
+  order: 1;
+  text-align: right
+}
+
+.medical-row figure {
+  height: 210px;
+  overflow: hidden
+}
+
+.medical-row img {
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.76) contrast(.90) brightness(1.06) sepia(.10)
+}
+
+.medical-row h3 {
+  margin: 0 0 16px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .1em
+}
+
+.medical-row p {
+  margin: 0;
+  font-size: 9px;
+  line-height: 2.05
+}
+
+.about-section {
+  background: var(--paper);
+  padding-top: 36px
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  gap: 74px;
+  align-items: center
+}
+
+.about-grid figure {
+  height: 245px;
+  overflow: hidden
+}
+
+.about-grid img {
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.73) contrast(.89) brightness(1.08) sepia(.11)
+}
+
+.about-grid h2 {
+  margin-bottom: 22px
+}
+
+.about-grid p {
+  margin: 0;
+  font-size: 9px;
+  line-height: 2.05
+}
+
+.staff-section {
+  padding-top: 96px
+}
+
+.staff-intro {
+  width: 730px;
+  max-width: 100%;
+  margin: -32px auto 62px;
+  text-align: center;
+  font-size: 9px;
+  line-height: 2.05
+}
+
+.staff-list {
+  width: 820px;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 62px
+}
+
+.staff-row {
+  display: grid;
+  grid-template-columns: 245px 1fr;
+  gap: 60px;
+  align-items: center
+}
+
+.staff-row.reverse {
+  grid-template-columns: 1fr 245px
+}
+
+.staff-row.reverse figure {
+  order: 2
+}
+
+.staff-row.reverse div {
+  order: 1;
+  text-align: right
+}
+
+.staff-row figure {
+  height: 185px;
+  overflow: hidden
+}
+
+.staff-row img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter: saturate(.78) contrast(.90) brightness(1.04) sepia(.09)
+}
+
+.staff-row:nth-child(2) img {
+  object-position: 50% 36%
+}
+
+.staff-row:nth-child(3) img {
+  object-position: 48% 36%
+}
+
+.staff-row:nth-child(4) img {
+  object-position: 51% 34%
+}
+
+.staff-row .role {
+  margin: 0 0 2px;
+  color: var(--sub);
+  font-size: 8px
+}
+
+.staff-row h3 {
+  margin: 0 0 11px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .09em
+}
+
+.staff-row p {
+  margin: 0 0 8px;
+  font-size: 8.5px;
+  line-height: 1.85
+}
+
+.access-section {
+  padding-top: 100px
+}
+
+.access-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 58px;
+  align-items: center
+}
+
+.map {
+  height: 255px;
+  overflow: hidden;
+  position: relative
+}
+
+.map img {
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(.16) sepia(.13) saturate(.75) contrast(.92) brightness(1.05)
+}
+
+.map:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(232, 226, 214, .12)
+}
+
+.access-grid h3 {
+  margin: 0 0 9px;
+  font-size: 10px;
+  font-weight: 400
+}
+
+.access-grid h3:not(:first-child) {
+  margin-top: 25px
+}
+
+.access-grid p {
+  margin: 0;
+  font-size: 9px;
+  line-height: 1.9
+}
+
+.bottom-hours {
+  padding-top: 78px;
+  padding-bottom: 100px
+}
+
+.site-footer {
+  text-align: center;
+  background: #f4f1ea
+}
+
+.footer-main {
+  padding: 58px 30px 50px
+}
+
+.footer-main img {
+  width: 105px;
+  margin: 0 auto 26px;
+  filter: grayscale(1) opacity(.56)
+}
+
+.footer-main p {
+  margin: 0 0 18px;
+  font-size: 8px;
+  line-height: 1.9;
+  color: #686a64
+}
+
+.footer-main .copyright {
+  margin-top: 30px;
+  font-size: 7.5px
+}
+
+.footer-band {
+  padding: 13px;
+  background: #96958d;
+  color: #f2f0ea;
+  font-size: 7px;
+  letter-spacing: .08em
+}
+
+/* 2026-07-21 reference-image correction */
+:root {
+  --deep-green: rgba(42, 62, 47, .32)
+}
+
+.site-header {
+  background: var(--deep-green);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.hero {
+  height: 650px;
+}
+
+.hero-image {
+  object-position: center center;
+  filter: none;
+  transform: scale(1.015);
+}
+
+.hero-shade {
+  background: linear-gradient(to bottom, rgba(28, 48, 33, .08), transparent 34%);
+}
+
+.hero-frost {
+  background: linear-gradient(to bottom, transparent 56%, rgba(251, 250, 246, .04) 65%, rgba(251, 250, 246, .34) 80%, var(--paper) 100%);
+}
+
+.hero-copy {
+  left: max(7vw, calc(50% - 535px));
+  bottom: 64px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  letter-spacing: .105em;
+  margin-bottom: 15px;
+}
+
+.hero-copy p {
+  font-size: 14px;
+  line-height: 1.9;
+  letter-spacing: .065em;
+}
+
+.facility-strip img,
+.news-photo img,
+.greeting-photo img,
+.medical-row img,
+.about-grid img {
+  filter: none;
+}
+
+.news-photo img {
+  object-position: center center
+}
+
+.medical-row img {
+  object-position: center center
+}
+
+/* 2026-07-21 readability and tone refinements */
+/* Match the left-side clinical technologist portrait to the warm sepia tone of the director portrait. */
+.staff-row:nth-child(3) img {
+  filter: saturate(.58) contrast(.92) brightness(1.06) sepia(.22);
+}
+
+/* Improve readability in the clinic-about block without changing its layout or wording. */
+.about-grid p {
+  font-size: 12px;
+  line-height: 2.05;
+  letter-spacing: .05em;
+}
+
+.about-grid .text-link {
+  font-size: 11px;
+  margin-top: 26px;
+}
+
+/* Make the five news items easier to read and give them clearer hierarchy. */
+.news-list a {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.8;
+  padding: 15px 0;
+}
+
+/* Use a stronger weight for the principal section headings requested by the client. */
+.news-copy h2,
+.section-title,
+.about-grid h2,
+#access .section-title {
+  font-weight: 500;
+}
+
+/* 2026-07-21 final requested refinements */
+/* Bring all previously undersized supporting copy up to the readable size used in the clinic-about paragraph. */
+.opening-notes,
+.greeting-copy p,
+.greeting-copy .signature,
+.medical-row p,
+.staff-intro,
+.staff-row p,
+.staff-row .role,
+.access-grid p,
+.footer-main p,
+.footer-main .copyright,
+.footer-band,
+.schedule,
+.kicker {
+  font-size: 12px;
+}
+
+.greeting-copy p,
+.medical-row p,
+.staff-intro,
+.staff-row p,
+.access-grid p,
+.opening-notes {
+  line-height: 2;
+  letter-spacing: .045em;
+}
+
+.schedule th,
+.schedule td {
+  font-size: 12px;
+}
+
+.news-list a {
+  font-size: 14px;
+}
+
+/* Match Suzuki and Yamamoto portraits to the warm muted sepia used in the medical-content photography. */
+.staff-row:nth-child(2) img,
+.staff-row:nth-child(3) img,
+.staff-row:nth-child(4) img {
+  filter: saturate(.58) contrast(.92) brightness(1.06) sepia(.22);
+}
+
+/* Turn the understated text links into refined outlined buttons with arrows. */
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 156px;
+  min-height: 44px;
+  margin-top: 26px;
+  padding: 10px 16px;
+  border: 1px solid rgba(48, 51, 47, .55);
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: .08em;
+}
+
+.text-link::after {
+  content: "→";
+  margin-left: 24px;
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* 2026-07-21 final staff photo corrections */
+/* Suzuki: tone down the blue and match the warm sepia/greige palette of the respiratory-care photograph. */
+.staff-row:nth-child(2) img {
+  filter: grayscale(.22) sepia(.34) saturate(.62) contrast(.92) brightness(1.05);
+}
+
+/* Takahashi: use the supplied respiratory-care photograph without additional color distortion. */
+.staff-row:nth-child(3) img {
+  filter: none;
+  object-position: center 38%;
+}
+
+
+/* 2026-07-21 requested photo and alignment corrections */
+/* Use the warmer supplied Suzuki portrait as-is. */
+.staff-row:nth-child(2) img {
+  filter: none;
+  object-position: center center;
+}
+
+/* Right-side staff profiles keep the alternating image placement, but the copy is set flush left for readability. */
+.staff-row.reverse div {
+  text-align: left;
+}
+
+/* Restore the original respiratory-care image shown in the reference. */
+.medical-row.reverse img {
+  object-position: center center;
+}
+
+/* 2026-07-21 final spacing and footer corrections */
+/* Show all three facility photographs without cropping their lower portions. */
+.facility-strip {
+  height: auto;
+  overflow: visible;
+  align-items: start;
+  background: var(--paper);
+}
+
+.facility-strip img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+/* Move the entire hero copy slightly lower while preserving the type balance. */
+.hero-copy {
+  bottom: 34px;
+}
+
+/* Keep the clinic mark, clinic name and copyright visibly contained in the footer. */
+.site-footer {
+  background: #f4f1ea;
+}
+
+.footer-main {
+  padding: 54px 30px 44px;
+}
+
+.footer-main img {
+  width: 118px;
+  margin: 0 auto 24px;
+  filter: grayscale(1) opacity(.62);
+}
+
+.footer-main .copyright {
+  margin: 30px 0 0;
+}
+
+.footer-band {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  background: #96958d;
+  color: #f2f0ea;
+}
+
+/* 2026-07-21 final gallery height and footer matching */
+.facility-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  width: 100%;
+  height: 242px;
+  overflow: hidden;
+  align-items: stretch;
+  background: var(--paper);
+}
+
+.facility-strip img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+.facility-strip img:nth-child(1) {
+  object-position: center 64%;
+}
+
+.facility-strip img:nth-child(2) {
+  object-position: center 54%;
+}
+
+.facility-strip img:nth-child(3) {
+  object-position: center 55%;
+}
+
+.site-footer {
+  text-align: center;
+  background: #f4f2ec;
+}
+
+.footer-main {
+  padding: 58px 30px 70px;
+}
+
+.footer-main h2 {
+  margin: 0 0 24px;
+  color: #777c75;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: .16em;
+}
+
+.footer-main .department-list {
+  margin: 0;
+  color: #777c75;
+  font-size: 14px;
+  line-height: 2.45;
+  letter-spacing: .12em;
+}
+
+.footer-main .footer-contact {
+  margin: 22px 0 0;
+  color: #8b8d87;
+  font-size: 11px;
+  line-height: 1.9;
+  letter-spacing: .08em;
+}
+
+.footer-band {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+  background: #96938a;
+  color: #e9e2c8;
+  font-size: 11px;
+  letter-spacing: .04em;
+}
+
+
+/* 2026-07-21 gallery full-height framing and medical image correction */
+.facility-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  align-items: stretch;
+}
+
+.facility-strip img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.58 / 1;
+  object-fit: cover;
+  object-position: center bottom !important;
+}
+
+.medical-row img[alt="呼吸器系の診療"] {
+  object-position: center center;
+}
+
+
+/* 2026-07-21 requested medical-image and footer-heading corrections */
+.footer-main h2 {
+  font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-weight: 400;
+}
+
+/* Staff profile text: match the supplied reference layout */
+.staff-profile {
+  margin: 24px 0 0;
+  padding-left: 1.35em;
+  list-style: disc;
+}
+
+.staff-profile li {
+  margin: 0 0 10px;
+  line-height: 1.9;
+}
+
+.staff-row h3 {
+  margin-bottom: 0;
+}
+
+/* 2026-07-21 museum-style hero typography */
+.hero-copy {
+  left: max(8vw, calc(50% - 550px));
+  bottom: 86px;
+  color: #30332f;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: .17em;
+  white-space: nowrap;
+}
+
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 1px;
+  margin: 38px 0 42px;
+  background: rgba(48, 51, 47, .48);
+}
+
+.hero-copy p {
+  margin: 0;
+  font-family: "Yu Gothic", YuGothic, "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 2.35;
+  letter-spacing: .17em;
+  color: #4c504d;
+}
+
+/* 2026-07-21 hero copy scale correction */
+.hero-copy {
+  left: max(7.2vw, calc(50% - 535px));
+  bottom: 48px;
+  max-width: 660px;
+}
+
+.hero h1 {
+  font-size: 34px;
+  line-height: 1.3;
+  letter-spacing: .15em;
+}
+
+.hero h1::after {
+  width: 38px;
+  margin: 24px 0 26px;
+}
+
+.hero-copy p {
+  font-size: 13px;
+  line-height: 2.15;
+  letter-spacing: .13em;
+}
+
+/* 2026-07-21 final hero vertical-position adjustment */
+.hero-copy {
+  bottom: 20px;
+}
+
+/* 2026-07-21 hero/header/footer tone refinement */
+:root {
+  --header-beige: rgba(126, 112, 89, .30);
+}
+
+.site-header {
+  background: var(--header-beige);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-bottom-color: rgba(255, 255, 255, .16);
+}
+
+.hero-copy {
+  bottom: 4px;
+}
+
+.site-footer {
+  background: #f1ede6;
+}
+
+.footer-band {
+  background: #746f67;
+  color: #f4f1eb;
+}
+
+/* 2026-07-21 final requested tone and hero adjustment */
+.hero-copy {
+  bottom: -14px;
+}
+
+.hero h1 {
+  font-size: 30px;
+  letter-spacing: .145em;
+}
+
+.hero h1::after {
+  margin: 20px 0 24px;
+}
+
+.site-footer {
+  background: #eee7dc;
+}
+
+.footer-band {
+  background: #8a8175;
+  color: #f7f3ec;
+}
+
+/* 2026-07-21 prevent hero copy clipping and tighten its visual width */
+.hero-copy {
+  bottom: 12px;
+  max-width: 520px;
+}
+
+.hero h1 {
+  font-size: 27px;
+  letter-spacing: .115em;
+}
+
+.hero h1::after {
+  width: 34px;
+  margin: 18px 0 20px;
+}
+
+.hero-copy p {
+  max-width: 430px;
+  font-size: 12px;
+  line-height: 1.9;
+  letter-spacing: .105em;
+}
+
+/* 2026-07-21 warm beige background refinement */
+:root {
+  --paper: #f7f2e9;
+  --cream: #eee4d7;
+}
+
+body,
+.opening-block,
+.medical-section,
+.about-section {
+  background: var(--paper);
+}
+
+.news-section,
+.staff-section,
+.access-section {
+  background: #f8f3eb;
+}
+
+.greeting {
+  background: var(--cream);
+}
+
+/* 2026-07-21 header darker-brown + more transparent, greeting warmer brown */
+:root {
+  --header-beige: rgba(104, 84, 62, 0.22);
+  --cream: #e7d8c6;
+}
+
+.site-header {
+  background: var(--header-beige);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom-color: rgba(255, 255, 255, .18);
+}
+
+.greeting {
+  background: var(--cream);
+}
+
+/* 2026-07-21 harmonize the three footer-area tones with the warm greeting brown */
+.bottom-hours {
+  background: #f3eadf;
+}
+
+.site-footer {
+  background: #e7d8c6;
+}
+
+.footer-main h2,
+.footer-main .department-list,
+.footer-main .footer-contact {
+  color: #6e6255;
+}
+
+.footer-band {
+  background: #8b7662;
+  color: #f7f1e9;
+}
+
+/* 2026-07-21 quiet museum-style hero animation */
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #e7e1d7;
+}
+
+.hero-slides .hero-image {
+  position: absolute;
+  inset: -2%;
+  width: 104%;
+  height: 104%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.015);
+  will-change: opacity, transform;
+  animation: heroCrossfade 24s infinite ease-in-out;
+}
+
+.hero-slides .hero-image-1 {
+  object-position: center center;
+  animation-delay: 0s;
+}
+
+.hero-slides .hero-image-2 {
+  object-position: center 58%;
+  animation-delay: 8s;
+}
+
+.hero-slides .hero-image-3 {
+  object-position: center 54%;
+  animation-delay: 16s;
+}
+
+@keyframes heroCrossfade {
+  0% {
+    opacity: 0;
+    transform: scale(1.015)
+  }
+
+  5% {
+    opacity: 1
+  }
+
+  28% {
+    opacity: 1;
+    transform: scale(1.055)
+  }
+
+  38% {
+    opacity: 0;
+    transform: scale(1.07)
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.07)
+  }
+}
+
+.hero-shade,
+.hero-frost,
+.hero-copy {
+  z-index: 2
+}
+
+.hero-shade,
+.hero-frost {
+  pointer-events: none
+}
+
+.hero-copy {
+  animation: heroCopyReveal 1.6s cubic-bezier(.22, .61, .36, 1) .35s both;
+}
+
+@keyframes heroCopyReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .hero-slides .hero-image {
+    animation: none;
+    opacity: 0;
+    transform: none
+  }
+
+  .hero-slides .hero-image-1 {
+    opacity: 1
+  }
+
+  .hero-copy {
+    animation: none
+  }
+}
+
+/* 2026-07-21 improve readability for greeting and medical descriptions */
+.greeting-copy p {
+  font-size: 13.5px;
+  line-height: 2.05;
+}
+
+.medical-row p {
+  font-size: 12.5px;
+  line-height: 2.05;
+}
+
+@media (max-width: 820px) {
+
+  .news-grid,
+  .greeting-grid,
+  .about-grid,
+  .access-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .footer-main,
+  .department-list,
+  .footer-contact {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .site-footer,
+  .footer-main,
+  .footer-band {
+    width: 100%;
+  }
+
+  .footer-main {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .department-list,
+  .footer-contact {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .hours-table {
+    width: 100%;
+    table-layout: fixed;
+    .narrow-container
+  }
+
+  .hours-table th,
+  .hours-table td {
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 12px;
+    white-space: normal;
+  }
+
+  .hours-table th:first-child,
+  .hours-table td:first-child {
+    width: 72px;
+  }
+
+  .hours-table {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  .hours-table th,
+  .hours-table td {
+    min-width: 0 !important;
+  }
+
+  .hours-table th:first-child,
+  .hours-table td:first-child {
+    width: 52px;
+  }
+
+  .hours-table th:first-child,
+  .hours-table td:first-child {
+    width: 22%;
+  }
+
+  .hours-table th:not(:first-child),
+  .hours-table td:not(:first-child) {
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 11px;
+    text-align: center;
+  }
+}
