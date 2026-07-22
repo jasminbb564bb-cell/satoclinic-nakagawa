@@ -232,6 +232,25 @@ a {
   background: linear-gradient(180deg, #f3f5f1 0%, #eef1ed 100%);
 }
 
+.facility-strip {
+  width: min(100% - 80px, 1160px);
+  margin: 96px auto 104px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 56px;
+  align-items: start;
+  background: #F3F0E8;
+}
+
+.facility-strip img {
+  height: 344px;
+  padding: 18px;
+  border: 1px solid #C6D0CC;
+  background: #F3F0E8;
+  box-shadow: 0 8px 24px rgba(54, 72, 68, 0.06);
+  object-fit: cover;
+}
+
 .opening-block {
   padding: 62px 0 44px;
 }
@@ -804,6 +823,19 @@ a {
     font-size: 24px;
     line-height: 1.4;
     white-space: normal;
+  }
+
+  .facility-strip {
+    width: min(100% - 32px, 640px);
+    margin: 40px auto 56px;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .facility-strip img {
+    height: auto;
+    aspect-ratio: 1.38 / 1;
+    padding: 12px;
   }
 
   .section {
