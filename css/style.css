@@ -2,8 +2,8 @@
   --ink: #31483f;
   --sub: #425852;
   --muted: #5b6f68;
-  --paper: #fafcf9;
-  --paper-alt: #f1f6f3;
+  --paper: #FFFFFF;
+  --paper-alt: #FFFFFF;
   --accent: #647d73;
   --accent-deep: #31483f;
   --line: rgba(197, 206, 199, 0.92);
@@ -21,7 +21,7 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
-  background: var(--paper);
+  background: #FFFFFF;
   color: var(--ink);
   font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
   font-size: 16px;
@@ -215,7 +215,7 @@ a {
 .opening-block,
 .medical-section,
 .about-section {
-  background: var(--paper);
+  background: #FFFFFF;
 }
 
 .greeting,
@@ -223,13 +223,25 @@ a {
   background: var(--paper-alt);
 }
 
-.news-section,
+.news-section {
+  background: rgba(28, 55, 49, 0.045);
+  border-top: 1px solid rgba(35, 65, 60, 0.18);
+  border-bottom: 1px solid rgba(35, 65, 60, 0.18);
+}
+
 .staff-section {
-  background: linear-gradient(180deg, #edf1eb 0%, #e8ede7 100%);
+  background: #FFFFFF;
+}
+
+.news-section,
+.news-section .news-copy h2,
+.news-section .news-list a,
+.news-section .text-link {
+  color: #29443F;
 }
 
 .access-section {
-  background: linear-gradient(180deg, #f3f5f1 0%, #eef1ed 100%);
+  background: #FFFFFF;
 }
 
 .facility-strip {
@@ -239,14 +251,15 @@ a {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 56px;
   align-items: start;
-  background: #DCE5E1;
-  box-shadow: 0 14px 40px rgba(55, 72, 68, 0.08);
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .facility-strip img {
   height: 344px;
   padding: 18px;
-  border: 1px solid rgba(198, 208, 204, 0.55);
+  border: none;
   background: transparent;
   box-shadow: none;
   object-fit: cover;
