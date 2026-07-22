@@ -239,15 +239,16 @@ a {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 56px;
   align-items: start;
-  background: #F3F0E8;
+  background: #DCE5E1;
+  box-shadow: 0 14px 40px rgba(55, 72, 68, 0.08);
 }
 
 .facility-strip img {
   height: 344px;
   padding: 18px;
-  border: 1px solid #C6D0CC;
-  background: #F3F0E8;
-  box-shadow: 0 8px 24px rgba(54, 72, 68, 0.06);
+  border: 1px solid rgba(198, 208, 204, 0.55);
+  background: transparent;
+  box-shadow: none;
   object-fit: cover;
 }
 
